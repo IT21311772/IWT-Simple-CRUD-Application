@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <title>Cric Info</title>
+    <link rel="stylesheet" href="./headerFooter.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav-container">
+        <nav class="navbar">
+            <h1 id="logo">Cric Enfo</h1>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="./products.html" class="nav-links">Equipments</a></li>
+                <li><a href="./cricketers.html" class="nav-links">Players</a></li>
+                <li><a href="./champions.html" class="nav-links">Champs</a></li>
+                <li><a href="./rankings.html" class="nav-links">Rankings</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1>Add Crickter</h1>
+    <form>
+        <p>Enter Name : <input type="text" name="name" id="name"></p>
+        <p>Select Category : 
+            <input type="radio" name="men" id="men" checked>
+            <label>Men</label>
+            <input type="radio" name="women" id="women">
+            <label>Women</label>
+        </p>
+        <p>Select Status : 
+            <input type="radio" name="active" id="active" checked>
+            <label>Active</label>
+            <input type="radio" name="retired" id="retired">
+            <label>Retired</label>
+        </p>
+        <p>Select Player Type : 
+            <select id="type" name="type">
+                <option value="batsman">Batsman</option>
+                <option value="bowler">Bowler</option>
+                <option value="allRounder">All-Rounder</option>
+            </select>
+        </p>
+        <input type="submit">
+    </form>
+    <footer>
+        <h1>Footer part is yet to design</h1>
+    </footer>
+</body>
