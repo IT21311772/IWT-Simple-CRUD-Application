@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <head>
     <title>Cric Info</title>
-    <link rel="stylesheet" href="./headerFooter.css">
+    <link rel="stylesheet" href="../CSS/headerFooter.css">
+    <link rel="stylesheet" href="../CSS/addCricketers.css">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -22,8 +23,10 @@
         </nav>
     </div>
 
-    <h1>Add Crickter</h1>
-    <form>
+    <!-- Body Part -->
+<div class="form-container">
+    <h1>Add Cricketer</h1>
+    <form action="#" method="post">
         <p>Enter Name : <input type="text" name="name" id="name"></p>
         <p>Select Category : 
             <input type="radio" name="men" id="men" checked>
@@ -44,9 +47,28 @@
                 <option value="allRounder">All-Rounder</option>
             </select>
         </p>
-        <input type="submit">
+        <input type="submit" value="Add Cricketer">
     </form>
-    <footer>
-        <h1>Footer part is yet to design</h1>
-    </footer>
+</div>
+
+<br><br><br><br><br>
+
+<!-- Footer -->
+<section class="footer">
+    <div class="social">
+        <a href="https://www.instagram.com"><img src="../Images/insta.jpg" class="instagram" width="50px" height="50px"></a>
+        <a href="https://www.facebook.com"><img src="../Images/fb.png" class="fb" width="50px" height="50px"></a>
+        <a href="https://www.snapchat.com"><img src="../Images/snap.jpg" class="snap" width="50px" height="50px"></a>
+        <a href="https://www.twitter.com"><img src="../Images/twitter.png" class="twitter" width="50px" height="50px"></a>
+    </div>
+    <ul class="list">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="../HTML/about.html">About</a></li>
+        <li><a href="../HTML/terms.html">Terms</a></li>
+        <li><a href="../HTML/privacy.html">Privacy & Policy</a></li>
+    </ul>
+    <p class="copyright">
+        Cricbuzz @ 2023
+    </p>
+</section>
 </body>
