@@ -20,7 +20,7 @@ body{
     border-radius: 5px;
 }
 
-form{
+#form{
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -31,7 +31,7 @@ h1{
     color: #0e3d31;
 }
 
-input{
+.form-input input{
     background-color: rgb(235, 230, 230);
     width: 88%;
     height: 40px;
@@ -47,12 +47,6 @@ button{
     background-color: rgb(149, 237, 176);
     width: 88%;
     height: 40px;
-    border-radius: 5px;
-    border-color: #84edd4ff;
-    border-width: 0px;
-    color: #009270;
-    font-weight: bold;
-    font-size: 18px;
 }
 
 p{

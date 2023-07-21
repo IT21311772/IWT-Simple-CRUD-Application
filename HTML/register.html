@@ -3,25 +3,30 @@
     <head>
         <title>Login Page</title>
         <link rel="stylesheet" href="../CSS/register.css">
+        <script src="../JS/register.js"></script>
     </head>
     <body>
         <div class="container">
-            <form action="#" method="post">
+            <form action="#" method="post" id="form">
                 <h1>SIGNUP NOW</h1><br>
                 <div class="form-input">
                     <input type="text" name="name" id="name" placeholder="Enter your Name"><br><br>
                 </div>
-                <div class="form-input">
+                <div class="form-input" >
                     <input type="text" name="email" id="email" placeholder="Enter your Email"><br><br>
+                    <div class="error"></div>
                 </div>
                 <div class="form-input">
                     <input type="text" name="phone" id="phone" placeholder="Enter your Contact"><br><br>
+                    <div class="error"></div>
                 </div>
                 <div class="form-input">
                     <input type="text" name="username" id="username" placeholder="Enter your Username"><br><br>
+                    <div class="error"></div>
                 </div>
                 <div class="form-input">
                     <input type="password" name="password" id="password" placeholder="Enter your Password"><br><br>
+                    <div class="error"></div>
                 </div>
                 <button onclick="">Signup Now</button><br><br>
                 <p>already have an account? <a href="./login.html">Login here !</a></p>
