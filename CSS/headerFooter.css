@@ -5,7 +5,7 @@
 }
 
 .navbar{
-    display: grid;
+    display: flex;
     grid-template-columns: 0.2fr auto 1fr;
     align-items: center;
     height: 80px;
@@ -18,7 +18,7 @@
     justify-self: start;
     color: white;
     cursor: pointer;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 .nav-menu{

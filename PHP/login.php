@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (isset($_SESSION["user"])) {
+        header("Location: index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,16 +25,12 @@
                     $result = mysqli_query($conn, $sql);
                     $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
                     if ($user) {
-                        if (password_verify($password, $user["password"])) {
-                            header("Location: index.php");
-                            die();
-                        }else {
-                            echo "<script> alert('Password does not match !') </script>";
-                            header("Location: index.php");
-                            die();
-                        } 
+                        session_start();
+                        $_SESSION["user"] = "yes";
+                        header("Location: index.php");
+                        die();
                     }else {
-                        echo "<script> alert('Username does not match !') </script>";
+                        echo "<script> alert('Credentials does not match !') </script>";
                     }
                 }
             ?>

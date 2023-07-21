@@ -1,7 +1,14 @@
+<?php
+    session_start();
+    if (!isset($_SESSION["user"])) {
+        header("Location: index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <head>
     <title>Cric Info</title>
-    <link rel="stylesheet" href="../CSS//headerFooter.css">
+    <link rel="stylesheet" href="../CSS/headerFooter.css">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -14,15 +21,15 @@
                 <span class="bar"></span>
             </div>
             <ul class="nav-menu">
-                <li><a href="./products.php" class="nav-links">Equipments</a></li>
                 <li><a href="./cricketers.php" class="nav-links">Players</a></li>
                 <li><a href="./champions.php" class="nav-links">Champs</a></li>
                 <li><a href="./rankings.php" class="nav-links">Rankings</a></li>
+                <li><a href="./logout.php" class="nav-links">Log out</a></li>
             </ul>
         </nav>
     </div>
     <h1>Crickters</h1>
-    <a href="./addCrickters.html"><button>Add New</button></a>
+    <a href="./addCrickters.php"><button>Add New</button></a>
     <p>Just a text for my sample....</p>
 
     <!-- Footer -->

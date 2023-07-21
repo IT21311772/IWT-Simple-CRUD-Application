@@ -1,3 +1,10 @@
+<?php
+    require_once "database.php";
+    // Retrieve the form data from the database
+    $sql = "SELECT * FROM players";
+    $result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,17 +22,60 @@
             <span class="bar"></span>
         </div>
         <ul class="nav-menu">
-            <li><a href="./products.php" class="nav-links">Equipments</a></li>
             <li><a href="./cricketers.php" class="nav-links">Players</a></li>
             <li><a href="./champions.php" class="nav-links">Champs</a></li>
             <li><a href="./rankings.php" class="nav-links">Rankings</a></li>
+            <li><a href="./logout.php" class="nav-links">Log out</a></li>
         </ul>
     </nav>
 </div>
 
-<h1>Active Cricketers</h1>
-<h1>Retired Cricketers</h1>
+    <button style="background-color: rgb(149, 237, 176);
+                        border-radius: 5px;
+                        border-color: #84edd4ff;
+                        border-width: 0px;
+                        font-weight: bold;
+                        font-size: 18px;
+                        cursor: pointer;
+                        margin-top: 20px;
+                        margin-left: 1380px;"><a href="./addCrickters.php" 
+                        style="text-decoration: none;
+                        color: #FFF;"
+                        >Add Player</a></button>
 
+    <table border="1" style="
+                        border-color: #009270;
+                        font-size: 18px;
+                        width: 700px;
+                        margin-top: -140px;
+                        margin-left: 400px;">
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Status</th>
+            <th>Type</th>
+        </tr>
+    <?php
+        if ($result->num_rows > 0) {
+            // Output data of each row
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row["name"] . "</td>";
+                echo "<td>" . $row["gender"] . "</td>";
+                echo "<td>" . $row["status"] . "</td>";
+                echo "<td>" . $row["type"] . "</td><br>";
+                echo "</tr>";
+            }
+        } else {
+            echo "No data found.";
+        }
+
+        // Close the connection
+        $conn->close();
+    ?>
+    </table>
+    <br><br><br><br>
+    
 <!-- Footer -->
 <section class="footer">
     <div class="social">

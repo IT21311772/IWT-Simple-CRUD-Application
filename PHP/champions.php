@@ -16,10 +16,10 @@
                     <span class="bar"></span>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="./products.php" class="nav-links">Equipments</a></li>
                     <li><a href="./cricketers.php" class="nav-links">Players</a></li>
                     <li><a href="./champions.php" class="nav-links">Champs</a></li>
                     <li><a href="./rankings.php" class="nav-links">Rankings</a></li>
+                    <li><a href="./logout.php" class="nav-links">Log out</a></li>
                 </ul>
             </nav>
         </div>
